@@ -1,1 +1,97 @@
-<p>home works!</p>
+<app-header></app-header>
+
+<div class="text-center mt-4">
+  <img src="assets/images/JxadSf.png" alt="Logo" style="height: 250px" />
+</div>
+
+<div class="container mt-4">
+  <!-- Hero Section -->
+  <div class="hero text-center p-5">
+    <h1>Bienvenue sur JXAD Music</h1>
+    <p>Votre plateforme collaborative pour artistes, beatmakers et paroliers</p>
+    <button class="btn btn-light btn-lg mt-3" [routerLink]="['/register']">
+      Inscrivez-vous maintenant
+    </button>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features text-center mt-5">
+    <h2>Fonctionnalités</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Télécharger des Chansons</h5>
+            <p class="card-text">
+              Partagez vos créations musicales avec notre communauté.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Gérer vos Beats</h5>
+            <p class="card-text">
+              Organisez et partagez vos instrumentaux facilement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Explorer Utilisateurs</h5>
+            <p class="card-text">
+              Trouvez des collaborateurs talentueux pour vos projets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="testimonials text-center mt-5">
+    <h2>Témoignages</h2>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <blockquote class="blockquote mt-4">
+          <p class="mb-0">
+            JXAD Music m'a permis de rencontrer des artistes incroyables.
+          </p>
+          <footer class="blockquote-footer mt-2">
+            Jean Dupont, <cite title="Source Title">Artiste</cite>
+          </footer>
+        </blockquote>
+      </div>
+      <div class="col-md-6">
+        <blockquote class="blockquote mt-4">
+          <p class="mb-0">
+            La meilleure plateforme pour les beatmakers. Je recommande !
+          </p>
+          <footer class="blockquote-footer mt-2">
+            Marie Curie, <cite title="Source Title">Beatmaker</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="cta text-center mt-5">
+    <h2>Rejoignez JXAD Music aujourd'hui</h2>
+    <p>
+      Que vous soyez artiste, beatmaker ou parolier, il y a une place pour vous.
+    </p>
+    <button
+      class="btn btn-primary btn-lg mt-3"
+      style="background-color: #19b4d3; border-color: #19b4d3"
+      [routerLink]="['/register']"
+    >
+      Créer un compte
+    </button>
+  </div>
+</div>
+
+<app-footer></app-footer>
