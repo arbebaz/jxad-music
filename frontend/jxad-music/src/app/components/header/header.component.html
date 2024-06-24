@@ -1,0 +1,304 @@
+<nav
+  class="navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary"
+  data-bs-theme="grey"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand"
+      [routerLink]="['/']"
+    >
+      <img src="assets/images/JxadSf.png" alt="Logo" style="height: 100px" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/register']"
+            [ngClass]="{ active: pageName === 'register' }"
+          >
+            Inscription
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/login']"
+            [ngClass]="{ active: pageName === 'login' }"
+          >
+            Connexion
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Mon Profil
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/profile']"
+                [ngClass]="{ active: pageName === 'profile' }"
+              >
+                Mon Profil
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/edit-profile']"
+                [ngClass]="{ active: pageName === 'edit-profile' }"
+              >
+                Modifier Profil
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Artiste
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/upload-song']"
+                [ngClass]="{ active: pageName === 'upload-song' }"
+              >
+                Télécharger Chanson
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/manage-songs']"
+                [ngClass]="{ active: pageName === 'manage-songs' }"
+              >
+                Gérer Chansons
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/artist-news-feed']"
+                [ngClass]="{ active: pageName === 'artist-news-feed' }"
+              >
+                Fil d'Actualités
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/artist-notes']"
+                [ngClass]="{ active: pageName === 'artist-notes' }"
+              >
+                Notes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Beatmaker
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/upload-beat']"
+                [ngClass]="{ active: pageName === 'upload-beat' }"
+              >
+                Télécharger Instrumental
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/manage-beats']"
+                [ngClass]="{ active: pageName === 'manage-beats' }"
+              >
+                Gérer Instrumentaux
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/beatmaker-news-feed']"
+                [ngClass]="{ active: pageName === 'beatmaker-news-feed' }"
+              >
+                Fil d'Actualités
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/beatmaker-notes']"
+                [ngClass]="{ active: pageName === 'beatmaker-notes' }"
+              >
+                Notes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Parolier
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/upload-lyrics']"
+                [ngClass]="{ active: pageName === 'upload-lyrics' }"
+              >
+                Télécharger Paroles
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/manage-lyrics']"
+                [ngClass]="{ active: pageName === 'manage-lyrics' }"
+              >
+                Gérer Paroles
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/lyricist-news-feed']"
+                [ngClass]="{ active: pageName === 'lyricist-news-feed' }"
+              >
+                Fil d'Actualités
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/lyricist-notes']"
+                [ngClass]="{ active: pageName === 'lyricist-notes' }"
+              >
+                Notes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Explorer
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/explore-users']"
+                [ngClass]="{ active: pageName === 'explore-users' }"
+              >
+                Explorer Utilisateurs
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/explore-productions']"
+                [ngClass]="{ active: pageName === 'explore-productions' }"
+              >
+                Explorer Productions
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/purchase-history']"
+            [ngClass]="{ active: pageName === 'purchase-history' }"
+          >
+            Historique d'Achats
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            href="#"
+          >
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/moderate-content']"
+                [ngClass]="{ active: pageName === 'moderate-content' }"
+              >
+                Modérer Contenus
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/manage-users']"
+                [ngClass]="{ active: pageName === 'manage-users' }"
+              >
+                Gérer Utilisateurs
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
