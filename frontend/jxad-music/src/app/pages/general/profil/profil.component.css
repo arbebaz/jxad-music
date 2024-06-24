@@ -1,0 +1,12 @@
+.card {
+    margin-bottom: 20px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .rounded {
+    border-radius: 8px;
+  }
+  

@@ -1,70 +1,40 @@
 <app-header></app-header>
 
-<div class="container mt-5 mb-5">
+<div class="container mt-4">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card">
-        <div class="card-body mt-3 mb-3">
-          <h2 class="text-center mb-4">Inscription sur JXAD Music</h2>
+        <div class="card-body">
+          <h2 class="text-center mb-4">Inscription</h2>
           <form>
-            <!-- Formulaire d'inscription -->
             <div class="mb-3">
-              <label for="inputUsername" class="form-label">Pseudo</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputUsername"
-                placeholder="Entrez votre Pseudo"
-              />
+              <label for="name" class="form-label">Pseudo</label>
+              <input type="text" id="name" class="form-control" placeholder="Votre Pseudo" required>
             </div>
             <div class="mb-3">
-              <label for="inputEmail" class="form-label">Adresse email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="inputEmail"
-                placeholder="Entrez votre adresse email"
-              />
+              <label for="email" class="form-label">Adresse Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Votre adresse email" required>
             </div>
             <div class="mb-3">
-              <label for="inputPassword" class="form-label">Mot de passe</label>
-              <input
-                type="password"
-                class="form-control"
-                id="inputPassword"
-                placeholder="Entrez votre mot de passe"
-              />
+              <label for="password" class="form-label">Mot de passe</label>
+              <input type="password" id="password" class="form-control" placeholder="Votre mot de passe" required>
             </div>
             <div class="mb-3">
-              <label for="confirmPassword" class="form-label"
-                >Confirmez le mot de passe</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="confirmPassword"
-                placeholder="Confirmez votre mot de passe"
-              />
+              <label for="category" class="form-label">Catégorie d'Artiste</label>
+              <select id="category" class="form-select" required>
+                <option value="" disabled selected>Choisir une catégorie</option>
+                <option value="artiste">Artiste</option>
+                <option value="beatmaker">Beatmaker</option>
+                <option value="parolier">Parolier</option>
+              </select>
             </div>
-
-            <!-- Bouton d'inscription -->
-            <div class="text-center mb-4">
-              <button
-                type="submit"
-                class="btn btn-primary btn-lg mt-3"
-                style="background-color: #19b4d3; border-color: #19b4d3"
-              >
-                S'inscrire
-              </button>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary cta-button" style="background-color: #19b4d3; border-color: #19b4d3;">S'inscrire</button>
             </div>
           </form>
-
-          <!-- Call to Action -->
-          <div class="text-center">
+          <div class="text-center mt-3">
             <p>Vous avez déjà un compte ?</p>
-            <a href="/login" class="btn btn-outline-primary cta-button">
-              Connectez-vous ici
-            </a>
+            <a href="/login" class="btn btn-outline" style="color: #19b4d3; border-color: #19b4d3;">Connectez-vous ici</a>
           </div>
         </div>
       </div>
@@ -73,3 +43,4 @@
 </div>
 
 <app-footer></app-footer>
+

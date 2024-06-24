@@ -1,1 +1,77 @@
-<p>profil works!</p>
+<app-header></app-header>
+
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex align-items-center">
+            <img
+              src="url_vers_la_photo_de_profil"
+              alt="Photo de Profil"
+              class="rounded-circle"
+              style="width: 100px; height: 100px"
+            />
+            <div class="ms-3">
+              <h2 class="mb-0">Nom d'utilisateur</h2>
+              <p class="text-muted">Biographie de l'utilisateur</p>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                  <strong>150</strong> Publications
+                </li>
+                <li class="list-inline-item"><strong>500</strong> Abonnés</li>
+                <li class="list-inline-item">
+                  <strong>200</strong> Abonnements
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4>Photos</h4>
+          <!-- Section des photos de l'utilisateur -->
+          <div class="row row-cols-3 g-2">
+            <div class="col">
+              <img src="url_vers_photo" class="img-fluid rounded" alt="Photo" />
+            </div>
+            <!-- Répéter pour chaque photo -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h4>Publications</h4>
+          <!-- Section des publications de l'utilisateur -->
+          <div class="row g-2">
+            <div class="col-md-6">
+              <img src="url_vers_photo" class="img-fluid rounded" alt="Photo" />
+            </div>
+            <!-- Répéter pour chaque publication -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bouton pour modifier le profil -->
+    <div class="text-center mt-4">
+      <a
+        href="/edit-profile"
+        class="btn btn-primary"
+        style="background-color: #ffffff; border-color: #19b4d3; color: #19b4d3"
+      >
+        Modifier mon Profil
+      </a>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,1 +1,54 @@
-<p>login works!</p>
+<app-header></app-header>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Connexion</h2>
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Adresse Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Votre adresse email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Mot de passe</label>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Votre mot de passe"
+                required
+              />
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="btn btn-primary cta-button"
+                style="background-color: #19b4d3; border-color: #19b4d3"
+              >
+                Se connecter
+              </button>
+            </div>
+          </form>
+          <div class="text-center mt-3">
+            <p>Vous n'avez pas de compte ?</p>
+            <a
+              href="/register"
+              class="btn btn-outline"
+              >Inscrivez-vous ici</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

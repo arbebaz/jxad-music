@@ -23,11 +23,13 @@ import { SearchComponent } from './pages/general/search/search.component';
 import { PurchaseHistoryComponent } from './pages/general/purchase-history/purchase-history.component';
 import { ModerateContentComponent } from './pages/general/moderate-content/moderate-content.component';
 import { ManageUsersComponent } from './pages/general/manage-users/manage-users.component';
+import { ProfilComponent } from './pages/general/profil/profil.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent}, 
     {path: 'register', component: RegisterComponent}, 
     {path: 'login', component: LoginComponent}, 
+    {path: 'profil', component: ProfilComponent}, 
     {path: 'edit-profile', component: EditProfileComponent},
     {path: 'upload-song', component: UploadSongComponent}, 
     {path: 'manage-song', component: ManageSongComponent}, 

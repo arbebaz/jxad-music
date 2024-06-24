@@ -1,0 +1,19 @@
+.form-control:focus {
+  border-color: #19b4d3;
+  box-shadow: 0 0 0 0.2rem rgba(25, 180, 211, 0.25);
+}
+
+.cta-button {
+  background-color: #19b4d3;
+  border-color: #19b4d3;
+}
+
+.cta-button:hover {
+  background-color: #197390;
+  border-color: #197390;
+}
+
+.btn-outline {
+  color: #19b4d3;
+  border-color: #19b4d3;
+}

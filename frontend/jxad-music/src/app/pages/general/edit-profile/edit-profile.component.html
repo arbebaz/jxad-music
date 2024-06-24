@@ -1,1 +1,116 @@
-<p>edit-profile works!</p>
+<app-header></app-header>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Modifier mon Profil</h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <!-- Photo de Profil -->
+            <div class="mb-3 text-center">
+              <img
+                src="assets/images/default-avatar.jpg"
+                alt="Photo de Profil"
+                class="avatar mb-2"
+              />
+              <input
+                type="file"
+                class="form-control"
+                id="avatar"
+                name="avatar"
+              />
+              <label class="form-label" for="avatar"
+                >Choisir une nouvelle photo de profil</label
+              >
+            </div>
+
+            <!-- Nom, Prénom et Pseudo -->
+            <div class="mb-3">
+              <label for="pseudo" class="form-label">Pseudo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pseudo"
+                name="pseudo"
+                value="JD"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nom"
+                name="nom"
+                value="Jean Dupont"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="prenom" class="form-label">Prénom</label>
+              <input
+                type="text"
+                class="form-control"
+                id="prenom"
+                name="prenom"
+                value="Jean"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                value="jeandupont@example.com"
+              />
+            </div>
+
+            <!-- Catégorie de l'Artiste -->
+            <div class="mb-3">
+              <label for="categorie" class="form-label"
+                >Catégorie de l'Artiste</label
+              >
+              <select class="form-select" id="categorie" name="categorie">
+                <option value="chanteur">Chanteur</option>
+                <option value="beatmaker">Beatmaker</option>
+                <option value="parolier">Parolier</option>
+                <option value="producteur">Producteur</option>
+              </select>
+            </div>
+
+            <!-- Biographie -->
+            <div class="mb-3">
+              <label for="biographie" class="form-label">Biographie</label>
+              <textarea
+                class="form-control"
+                id="biographie"
+                name="biographie"
+                rows="4"
+              >
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea
+              >
+            </div>
+
+            <!-- Bouton de Soumission -->
+            <div class="text-center mt-5 mb-5">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="background-color: #19b4d3; border-color: #19b4d3"
+              >
+                Enregistrer les Modifications
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
