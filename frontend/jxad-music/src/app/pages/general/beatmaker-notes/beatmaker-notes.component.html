@@ -1,1 +1,46 @@
-<p>beatmaker-notes works!</p>
+<!-- beatmaker-notes.component.html -->
+<app-header></app-header>
+
+<div class="container mt-5">
+    <h2 class="text-center">Mes Notes 🎹</h2>
+  
+    <form (ngSubmit)="addNote()" class="mb-4">
+      <div class="mb-3">
+        <label for="noteTitle" class="form-label">Titre de la Note</label>
+        <input
+          type="text"
+          class="form-control"
+          id="noteTitle"
+          [(ngModel)]="newNote.title"
+          name="title"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="noteContent" class="form-label">Contenu de la Note</label>
+        <textarea
+          class="form-control"
+          id="noteContent"
+          [(ngModel)]="newNote.content"
+          name="content"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="background-color: #07969E; border-color: #07969E">Ajouter la Note</button>
+    </form>
+  
+    <div class="row">
+      <div *ngFor="let note of notes" class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ note.title }}</h5>
+            <p class="card-text">{{ note.content }}</p>
+            <button class="btn" style="background-color: #82729E; color: white" (click)="deleteNote(note.id)">Supprimer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>

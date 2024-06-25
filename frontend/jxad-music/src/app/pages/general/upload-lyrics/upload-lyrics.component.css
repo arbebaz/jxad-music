@@ -2,6 +2,10 @@
     margin-top: 5rem;
   }
   
+  .form-control:focus {
+    border-color: #045A5C;
+    box-shadow: 0 0 0 0.2rem rgba(25, 180, 211, 0.25);
+  }
   .card {
     border: none;
     border-radius: 10px;
@@ -9,7 +13,7 @@
   }
   
   .card-header {
-    background-color: #19b4d3;
+    background-color: #045A5C;
     color: white;
     text-align: center;
     border-top-left-radius: 10px;
@@ -17,12 +21,12 @@
   }
   
   .btn-primary {
-    background-color: #19b4d3;
-    border-color: #19b4d3;
+    background-color: #045A5C;
+    border-color: #045A5C;
   }
   
   .btn-primary:hover {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background-color: #045A5C;
+    border-color: #045A5C;
   }
   

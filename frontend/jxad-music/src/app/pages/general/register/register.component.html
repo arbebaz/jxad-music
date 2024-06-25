@@ -1,6 +1,10 @@
 <app-header></app-header>
 
-<div class="container mt-4">
+<div class="text-center mt-4">
+  <img src="assets/images/JxadSf.png" alt="Logo" style="height: 150px" />
+</div>
+
+<div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <div class="card">
@@ -9,32 +13,65 @@
           <form>
             <div class="mb-3">
               <label for="name" class="form-label">Pseudo</label>
-              <input type="text" id="name" class="form-control" placeholder="Votre Pseudo" required>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Votre Pseudo"
+                required
+              />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Adresse Email</label>
-              <input type="email" id="email" class="form-control" placeholder="Votre adresse email" required>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Votre adresse email"
+                required
+              />
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Mot de passe</label>
-              <input type="password" id="password" class="form-control" placeholder="Votre mot de passe" required>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Votre mot de passe"
+                required
+              />
             </div>
             <div class="mb-3">
-              <label for="category" class="form-label">Catégorie d'Artiste</label>
+              <label for="category" class="form-label"
+                >Catégorie d'Artiste</label
+              >
               <select id="category" class="form-select" required>
-                <option value="" disabled selected>Choisir une catégorie</option>
+                <option value="" disabled selected>
+                  Choisir une catégorie
+                </option>
                 <option value="artiste">Artiste</option>
                 <option value="beatmaker">Beatmaker</option>
                 <option value="parolier">Parolier</option>
               </select>
             </div>
             <div class="text-center">
-              <button type="submit" class="btn btn-primary cta-button" style="background-color: #19b4d3; border-color: #19b4d3;">S'inscrire</button>
+              <button
+                type="submit"
+                class="btn btn-primary cta-button"
+                style="background-color: #19b4d3; border-color: #19b4d3"
+              >
+                S'inscrire
+              </button>
             </div>
           </form>
           <div class="text-center mt-3">
             <p>Vous avez déjà un compte ?</p>
-            <a href="/login" class="btn btn-outline" style="color: #19b4d3; border-color: #19b4d3;">Connectez-vous ici</a>
+            <a
+              href="/login"
+              class="btn btn-outline"
+              style="color: #19b4d3; border-color: #19b4d3"
+              >Connectez-vous ici</a
+            >
           </div>
         </div>
       </div>
@@ -43,4 +80,3 @@
 </div>
 
 <app-footer></app-footer>
-

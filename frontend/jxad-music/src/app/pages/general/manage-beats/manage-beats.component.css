@@ -2,6 +2,7 @@
     margin-top: 5rem;
   }
   
+  
   .card {
     border: none;
     border-radius: 10px;
@@ -9,7 +10,7 @@
   }
   
   .card-header {
-    background-color: #19b4d3;
+    background-color: #07969E;
     color: white;
     text-align: center;
     border-top-left-radius: 10px;
