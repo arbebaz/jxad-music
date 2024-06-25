@@ -1,1 +1,72 @@
-<p>upload-song works!</p>
+<app-header></app-header>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Télécharger une Chanson</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <!-- Titre de la Chanson -->
+            <div class="mb-3">
+              <label for="songTitle" class="form-label">Titre de la Chanson</label>
+              <input
+                type="text"
+                class="form-control"
+                id="songTitle"
+                placeholder="Entrez le titre de la chanson"
+                [(ngModel)]="song.title"
+                name="title"
+                required
+              />
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="songDescription" class="form-label">Description</label>
+              <textarea
+                class="form-control"
+                id="songDescription"
+                rows="3"
+                placeholder="Entrez une description"
+                [(ngModel)]="song.description"
+                name="description"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Catégorie -->
+            <div class="mb-3">
+              <label for="songCategory" class="form-label">Catégorie</label>
+              <select class="form-select" id="songCategory" [(ngModel)]="song.category" name="category" required>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="jazz">Jazz</option>
+                <option value="classique">Classique</option>
+              </select>
+            </div>
+
+            <!-- Fichier de la Chanson -->
+            <div class="mb-3">
+              <label for="songFile" class="form-label">Fichier de la Chanson</label>
+              <input type="file" class="form-control" id="songFile" (change)="onFileChange($event)" required />
+            </div>
+
+            <!-- Bouton de Soumission -->
+            <div class="text-center mt-5 mb-5">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="background-color: #19b4d3; border-color: #19b4d3"
+              >
+                Télécharger
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

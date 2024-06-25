@@ -1,1 +1,72 @@
-<p>upload-beat works!</p>
+<app-header></app-header>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Télécharger un Beat</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <!-- Titre du Beat -->
+            <div class="mb-3">
+              <label for="beatTitle" class="form-label">Titre du Beat</label>
+              <input
+                type="text"
+                class="form-control"
+                id="beatTitle"
+                placeholder="Entrez le titre du beat"
+                [(ngModel)]="beat.title"
+                name="title"
+                required
+              />
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+              <label for="beatDescription" class="form-label">Description</label>
+              <textarea
+                class="form-control"
+                id="beatDescription"
+                rows="3"
+                placeholder="Entrez une description"
+                [(ngModel)]="beat.description"
+                name="description"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Catégorie -->
+            <div class="mb-3">
+              <label for="beatCategory" class="form-label">Catégorie</label>
+              <select class="form-select" id="beatCategory" [(ngModel)]="beat.category" name="category" required>
+                <option value="hip-hop">Hip-Hop</option>
+                <option value="trap">Trap</option>
+                <option value="electro">Electro</option>
+                <option value="reggae">Reggae</option>
+              </select>
+            </div>
+
+            <!-- Fichier du Beat -->
+            <div class="mb-3">
+              <label for="beatFile" class="form-label">Fichier du Beat</label>
+              <input type="file" class="form-control" id="beatFile" (change)="onFileChange($event)" required />
+            </div>
+
+            <!-- Bouton de Soumission -->
+            <div class="text-center mt-5 mb-5">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="background-color: #19b4d3; border-color: #19b4d3"
+              >
+                Télécharger
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
