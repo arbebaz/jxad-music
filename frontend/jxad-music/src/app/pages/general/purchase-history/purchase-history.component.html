@@ -1,1 +1,48 @@
-<p>purchase-history works!</p>
+<app-header></app-header>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center">Historique des Achats</h2>
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-10">
+      <div class="row">
+        <div *ngFor="let purchase of purchases" class="col-md-6 mb-4">
+          <div class="card shadow-sm h-100 text-center">
+            <div class="card-body d-flex flex-column align-items-center">
+              <img
+                src="assets/images/JxadSf.png"
+                alt="Couverture de la chanson"
+                class="img-fluid mb-3"
+                style="
+                  width: 150px;
+                  height: 150px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                "
+              />
+              <h5 class="card-title">{{ purchase.songTitle }}</h5>
+              <p class="card-text mb-1">Artiste: {{ purchase.artist }}</p>
+              <p class="card-text mb-1">
+                Date d'achat: {{ purchase.purchaseDate | date }}
+              </p>
+              <p class="card-text mb-3">
+                Prix: {{ purchase.price | currency : "EUR" }}
+              </p>
+              <button
+                class="btn mt-auto"
+                style="background-color: #19b4d3; color: white"
+                (click)="downloadSong(purchase.songUrl)"
+              >
+                Télécharger
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="purchases.length === 0" class="text-center mt-5">
+        <p>Aucun achat trouvé.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
