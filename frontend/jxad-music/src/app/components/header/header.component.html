@@ -3,10 +3,7 @@
   data-bs-theme="grey"
 >
   <div class="container-fluid">
-    <a
-      class="navbar-brand"
-      [routerLink]="['/']"
-    >
+    <a class="navbar-brand" [routerLink]="['/']">
       <img src="assets/images/JxadSf.png" alt="Logo" style="height: 100px" />
     </a>
     <button
@@ -94,8 +91,8 @@
             <li>
               <a
                 class="dropdown-item"
-                [routerLink]="['/manage-songs']"
-                [ngClass]="{ active: pageName === 'manage-songs' }"
+                [routerLink]="['/manage-song']"
+                [ngClass]="{ active: pageName === 'manage-song' }"
               >
                 Gérer Chansons
               </a>

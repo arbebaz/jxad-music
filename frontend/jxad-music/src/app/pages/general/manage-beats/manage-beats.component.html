@@ -1,1 +1,36 @@
-<p>manage-beats works!</p>
+<app-header></app-header>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="text-center">Gérer mes Beats</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Description</th>
+                <th scope="col">Catégorie</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let beat of beats">
+                <td>{{ beat.title }}</td>
+                <td>{{ beat.description }}</td>
+                <td>{{ beat.category }}</td>
+                <td>
+                  <button class="btn btn-warning btn-sm" (click)="editBeat(beat)">Modifier</button>
+                  <button class="btn btn-danger btn-sm" (click)="deleteBeat(beat.id)">Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
