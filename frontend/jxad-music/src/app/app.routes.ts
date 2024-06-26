@@ -24,6 +24,7 @@ import { ModerateContentComponent } from './pages/general/moderate-content/moder
 import { ManageUsersComponent } from './pages/general/manage-users/manage-users.component';
 import { ProfilComponent } from './pages/general/profil/profil.component';
 import { ManageSongsComponent } from './pages/general/manage-song/manage-song.component';
+import { NewsFeedComponent } from './pages/general/news-feed/news-feed.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,6 +51,8 @@ export const routes: Routes = [
   { path: 'purchase-history', component: PurchaseHistoryComponent },
   { path: 'moderate-content', component: ModerateContentComponent },
   { path: 'manage-users', component: ManageUsersComponent },
+  { path: 'news-feed', component: NewsFeedComponent },
+
 
   { path: '**', component: NotFoundComponent },
 ];

@@ -37,6 +37,15 @@
             Connexion
           </a>
         </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [routerLink]="['/news-feed']"
+            [ngClass]="{ active: pageName === 'news-feed' }"
+          >
+            News
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -64,6 +73,15 @@
                 [ngClass]="{ active: pageName === 'edit-profile' }"
               >
                 Modifier Profil
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                [routerLink]="['/purchase-history']"
+                [ngClass]="{ active: pageName === 'purchase-history' }"
+              >
+                Historique d'Achats
               </a>
             </li>
           </ul>
@@ -245,15 +263,6 @@
               </a>
             </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            [routerLink]="['/purchase-history']"
-            [ngClass]="{ active: pageName === 'purchase-history' }"
-          >
-            Historique d'Achats
-          </a>
         </li>
         <li class="nav-item dropdown">
           <a

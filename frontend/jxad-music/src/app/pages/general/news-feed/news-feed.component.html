@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center">Actualités</h2>
+  <!-- Bouton pour une nouvelle publication -->
+  <a
+  href="/new-publication"
+  class="btn btn-primary"
+  style="background-color: #19b4d3; border-color: #19b4d3; color: #ffffff"
+>
+  Nouvelle Publication
+</a>
+  <div class="row mt-4">
+    <div *ngFor="let post of posts" class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="post.coverImageUrl" alt="Cover Image" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.description }}</p>
+          <div class="d-flex justify-content-between align-items-center mt-auto">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+            </div>
+            <div class="text-muted">
+              <span>{{ post.likes }} Likes</span>
+              <span class="mx-2">|</span>
+              <span>{{ post.comments }} Commentaires</span>
+            </div>
+          </div>
+          <hr>
+          <!-- Zone pour les likes et les commentaires -->
+          <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-sm btn-outline-primary">J'aime</button>
+            <button type="button" class="btn btn-sm btn-outline-primary">Commenter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="posts.length === 0" class="text-center mt-5">
+      <p>Aucune publication trouvée.</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

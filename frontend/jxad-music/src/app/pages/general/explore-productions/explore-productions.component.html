@@ -1,1 +1,27 @@
-<p>explore-productions works!</p>
+<app-header></app-header>
+
+<div class="container mt-5 mb-5">
+  <h2 class="text-center">Explorer les Productions</h2>
+  <div class="row mt-4">
+    <div *ngFor="let production of productions" class="col-md-6">
+      <div class="card mb-4 shadow-sm">
+        <img [src]="production.coverImageUrl" alt="Production Image" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ production.title }}</h5>
+          <p class="card-text">{{ production.description }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-outline-secondary">Acheter</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Détails</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="productions.length === 0" class="text-center mt-5">
+      <p>Aucune production trouvée.</p>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
