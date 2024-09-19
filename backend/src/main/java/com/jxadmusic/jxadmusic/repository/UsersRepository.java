@@ -11,6 +11,5 @@ public interface UsersRepository extends JpaRepository<Users, Integer> {
     // insert, update, delete, select
 
     // select * from user where email like 'email'
-    Users findByEmailLikeIgnoreCase(String email);
-
+    Users findByEmailIgnoreCase(String email);
 }

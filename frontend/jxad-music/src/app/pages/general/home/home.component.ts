@@ -1,16 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '../../../components/header/header.component';
-import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from '../../../components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeService } from '../../../services/home.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, RouterLink, CommonModule, FooterComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  imports: [CommonModule, HttpClientModule],
+  template: `
+    <h1>{{ homeData.title }}</h1>
+    <p>{{ homeData.subtitle }}</p>
+  `,
+  providers: [HomeService]
 })
-export class HomeComponent {
-  
+export class HomeComponent implements OnInit {
+  homeData: any = {};
+
+  constructor(private homeService: HomeService) { }
+
+  ngOnInit() {
+    this.homeService.getHomeData().subscribe({
+      next: (data) => {
+        this.homeData = data;
+      },
+      error: (error) => {
+        console.error('Erreur lors de la récupération des données:', error);
+      }
+    });
+  }
 }

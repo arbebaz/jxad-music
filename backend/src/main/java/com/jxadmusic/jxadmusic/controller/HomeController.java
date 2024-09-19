@@ -1,53 +1,25 @@
 package com.jxadmusic.jxadmusic.controller;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.jxadmusic.jxadmusic.model.Role;
-import com.jxadmusic.jxadmusic.model.Users;
-import com.jxadmusic.jxadmusic.service.RoleService;
-import com.jxadmusic.jxadmusic.service.UsersService;
-
-@Controller
+@CrossOrigin(origins = "*")
+@RestController
 public class HomeController {
 
-    @Autowired
-    private RoleService roleService;
+    @RequestMapping("/api")
 
-    @Autowired
-    private UsersService usersService;
-
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    @GetMapping("/")
-    public String home() {
-
-        // Créer un compte
-        /*
-         * Role role = new Role();
-         * role.setName("CLIENT");
-         * roleService.saveRole(role);
-         * 
-         * Users users = new Users();
-         * users.setEmail("a@a.fr");
-         * users.setPassword(bCryptPasswordEncoder.encode("admin"));
-         * users.setRoles(List.of(role));
-         * users.setName("Admin");
-         * 
-         * usersService.saveUser(users);
-         */
-
-        // Ajouter le role au compte
-        return "home"; // le nom de la view dans le répertoire template
-    }
-
-    @GetMapping("/login")
-    public String login() {
-        return "login";
+    @GetMapping("/home")
+    public ResponseEntity<Map<String, String>> getHomeData() {
+        Map<String, String> homeData = new HashMap<>();
+        homeData.put("title", "Bienvenue sur JXAD Music");
+        homeData.put("subtitle", "Votre plateforme de musique préférée");
+        return ResponseEntity.ok(homeData);
     }
 }

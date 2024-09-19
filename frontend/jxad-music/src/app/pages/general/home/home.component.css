@@ -5,6 +5,10 @@
     padding: 20px;
   }
   
+  .hero, .hero h1, .hero p {
+    color: white !important;
+  }
+
   .hero {
     background: #19B4D3;
     color: white;

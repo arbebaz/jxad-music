@@ -17,7 +17,7 @@ public class UsersService implements UserDetailsService {
     private UsersRepository usersRepository;
 
     public Users findByEmail(String email) {
-        return usersRepository.findByEmailLikeIgnoreCase(email);
+        return usersRepository.findByEmailIgnoreCase(email);
     }
 
     public Users saveUser(Users user) {
@@ -27,7 +27,7 @@ public class UsersService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        UserDetails user = usersRepository.findByEmailLikeIgnoreCase(username);
+        UserDetails user = usersRepository.findByEmailIgnoreCase(username);
         if (user == null) {
             throw new UsernameNotFoundException("User not found");
         }
